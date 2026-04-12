@@ -1,191 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Don's Evolving Life — Dashboard</title>
-<style>
-  :root {
-    --bg: #f8f7f4;
-    --card: #ffffff;
-    --border: rgba(0,0,0,0.1);
-    --text: #2c2c2a;
-    --muted: #73726c;
-    --hint: #9c9a92;
-    --teal: #1D9E75;
-    --coral: #D85A30;
-    --purple: #7F77DD;
-    --blue: #378ADD;
-    --amber: #BA7517;
-    --gray: #888780;
-    --teal-bg: #E1F5EE;
-    --coral-bg: #FAECE7;
-    --purple-bg: #EEEDFE;
-    --blue-bg: #E6F1FB;
-    --amber-bg: #FAEEDA;
-    --gray-bg: #F1EFE8;
-    --teal-text: #085041;
-    --coral-text: #712B13;
-    --purple-text: #3C3489;
-    --blue-text: #0C447C;
-    --amber-text: #633806;
-    --gray-text: #444441;
-    --radius: 12px;
-    --radius-sm: 8px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #1a1a18;
-      --card: #242422;
-      --border: rgba(255,255,255,0.1);
-      --text: #e8e6e0;
-      --muted: #9c9a92;
-      --hint: #73726c;
-      --teal-bg: #04342C;
-      --coral-bg: #4A1B0C;
-      --purple-bg: #26215C;
-      --blue-bg: #042C53;
-      --amber-bg: #412402;
-      --gray-bg: #2C2C2A;
-      --teal-text: #9FE1CB;
-      --coral-text: #F5C4B3;
-      --purple-text: #CECBF6;
-      --blue-text: #B5D4F4;
-      --amber-text: #FAC775;
-      --gray-text: #D3D1C7;
-    }
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px 16px; max-width: 720px; margin: 0 auto; }
-  header { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 0.5px solid var(--border); }
-  h1 { font-size: 22px; font-weight: 500; margin-bottom: 4px; }
-  .tagline { font-size: 13px; color: var(--muted); }
-  .date { font-size: 12px; color: var(--hint); margin-top: 6px; }
-  .section-label { font-size: 11px; font-weight: 500; color: var(--hint); text-transform: uppercase; letter-spacing: .07em; margin: 24px 0 10px; }
-  .card { background: var(--card); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px; }
-  .area-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .area-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .area-title { font-size: 15px; font-weight: 500; }
-  .area-code { font-size: 11px; color: var(--hint); font-family: monospace; margin-left: auto; }
-  .threads { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 8px; border-top: 0.5px solid var(--border); }
-  .thread { font-size: 12px; padding: 4px 11px; border-radius: 99px; border: 0.5px solid var(--border); color: var(--muted); background: var(--bg); text-decoration: none; display: inline-block; }
-  .thread:hover { border-color: var(--text); color: var(--text); }
-  .quote { font-size: 14px; color: var(--muted); font-style: italic; padding: 12px 16px; border-left: 2px solid var(--border); margin-bottom: 10px; }
-  .note { font-size: 12px; color: var(--hint); margin-top: 16px; text-align: center; }
-  a { color: inherit; }
-</style>
-</head>
-<body>
 
-<header>
-  <h1>Don's Evolving Life</h1>
-  <p class="tagline">A flawed being in motion, learning to accept the flaws and enjoy the journey.</p>
-  <p class="date" id="today"></p>
-</header>
+Don's Evolving Life
 
-<div class="quote">"A mind that experiences the world richly and deeply, then builds structures to capture, understand, and share what it finds."</div>
+A flawed being in motion, learning to accept the flaws and enjoy the journey.
 
-<div class="section-label">My areas</div>
+Sunday, April 12, 2026
+Don & Claude — Origin
+"A mind that experiences the world richly and deeply, then builds structures to capture, understand, and share what it finds."
+My areas
+Transplant health & safety HEALTH
+Labs & results
+Medications
+Diet guidelines
+Recipes & kitchen RECIPE
+Beef
+Poultry
+Dessert
+Dairy
+Vegetables
+Organization
+TheEvolvingKitchen — YouTube YOUTUBE
+Episode planning
+Script writing
+Channel growth
+Consciousness & the Reset MIND
+Meditation
+Reset documentation
+Genealogy
+Technology TECH
+Tech education
+Tech updates
+Using Claude
+Life organization & purchasing LIFE
+Organization
+Purchasing
+Current events
+General banter & humor BANTER
+Just talking
+Make me laugh
 
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#1D9E75"></div>
-    <span class="area-title">Transplant health & safety</span>
-    <span class="area-code">HEALTH</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Labs & results</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Medications</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Diet guidelines</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#D85A30"></div>
-    <span class="area-title">Recipes & kitchen</span>
-    <span class="area-code">RECIPE</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Beef</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Poultry</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Dessert</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Dairy</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Vegetables</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Organization</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#D85A30"></div>
-    <span class="area-title">TheEvolvingKitchen — YouTube</span>
-    <span class="area-code">YOUTUBE</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Episode planning</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Script writing</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Channel growth</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#7F77DD"></div>
-    <span class="area-title">Consciousness & the Reset</span>
-    <span class="area-code">MIND</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Meditation</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Reset documentation</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Genealogy</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#378ADD"></div>
-    <span class="area-title">Technology</span>
-    <span class="area-code">TECH</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Tech education</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Tech updates</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Using Claude</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#BA7517"></div>
-    <span class="area-title">Life organization & purchasing</span>
-    <span class="area-code">LIFE</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Organization</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Purchasing</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Current events</a>
-  </div>
-</div>
-
-<div class="card">
-  <div class="area-header">
-    <div class="area-dot" style="background:#888780"></div>
-    <span class="area-title">General banter & humor</span>
-    <span class="area-code">BANTER</span>
-  </div>
-  <div class="threads">
-    <a class="thread" href="https://claude.ai" target="_blank">Just talking</a>
-    <a class="thread" href="https://claude.ai" target="_blank">Make me laugh</a>
-  </div>
-</div>
-
-<p class="note">Built with Claude · TheEvolvingKitchen · Updated April 2026</p>
-
-<script>
-  const d = new Date();
-  document.getElementById('today').textContent = d.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
-</script>
-
-</body>
-</html>
+Built with Claude · TheEvolvingKitchen · Updated April 2026
